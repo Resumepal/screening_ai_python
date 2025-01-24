@@ -13,6 +13,7 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
+from pathlib import Path
 
 # To install the library, run the following
 #
@@ -30,6 +31,10 @@ REQUIRES = [
     "typing-extensions >= 4.7.1",
 ]
 
+# Read the content of README.md
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text(encoding="utf-8")
+
 setup(
     name=NAME,
     version=VERSION,
@@ -41,9 +46,7 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
-    long_description_content_type='text/markdown',
-    long_description="""\
-    API Documentation for Screening AI
-    """,  # noqa: E501
+    long_description_content_type="text/markdown",
+    long_description=long_description,  # Use README.md content here
     package_data={"screening_ai": ["py.typed"]},
 )
