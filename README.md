@@ -18,9 +18,9 @@ Python 3.8+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/Resumepal/screening_ai_python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/Resumepal/screening_ai_python.git`)
 
 Then import the package:
 ```python
@@ -57,8 +57,10 @@ from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
+
+# You can replace host with your own server URL if you are not using ByteRaven managed API server.
 configuration = screening_ai.Configuration(
-    host = "http://localhost"
+    host = "http://localhost" 
 )
 
 # The client must configure the authentication and authorization parameters
