@@ -22,7 +22,7 @@ from pathlib import Path
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "screening-ai"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 PYTHON_REQUIRES = ">= 3.8"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 3.0.0",
